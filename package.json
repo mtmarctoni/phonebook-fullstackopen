@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build:ui": "rmdir \/s \/q dist && mkdir dist && cd ui && npm run build && xcopy dist ..\\dist \/e \/i \/h",
+    "build:ui": "rmdir /s /q dist && mkdir dist && cd ui && npm run build && xcopy dist ..\\dist /e /i /h",
     "deploy": "npm run build:ui && git add * && git commit -m uibuild && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +20,9 @@
   "license": "UNLICENSED",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
+    "mongoose": "^8.8.2",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
